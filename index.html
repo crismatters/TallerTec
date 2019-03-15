@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <!-- Required meta tags -->
+    <script type="text/javascript" src="/bootstrap/js/lib/angular.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -90,6 +91,46 @@
         </div>
     </section>
 
+    <!-- Comienza Angular -->
+        <h1>{{"Hola, Mundo"}}</h1>
+        <h4>Hola, AngularJS</h4>
+        <br />
+          <h1>Filtros en Angular</h1>
+          <h4>{{"Cristóbal"}}</h4>
+          <br />
+          <h4>{{"Cristóbal" | lowercase}}</h4>
+          <br />
+          <h4>{{"Cristóbal" | uppercase}}</h4>
+        <br />
+        <h1>Filltros de Moneda</h1>
+        <h4>{{10500 | currency}}</h4>
+        <br />
+        <h4>{{10500 | currency:'€'}}</h4>
+        <br />
+        <h4>{{15000 | number}}</h4>
+
+         <h1>ng-mode con Angular JS</h1>
+         <h4>Data bind</h4>
+         <div class="container">
+           Nombre:{{nombre}}
+           <input type="text" class="form-control" ng-model="nombre"><br>
+             Estado: {{estado}}
+           <select class="form-control" ng-model="estado">
+              <option value="1">Ags</option>
+              <option value="2">Zac</option>
+              <option value="3">Jal</option>
+           </select>
+           <br>
+           Escoge una Opción: {{opt1}} {{opt2}} <br />
+           <input type="checkbox" value="" ng-model="opt1">Opcion 1
+           <input type="checkbox" value="" ng-model="opt2">Opcion 2
+           <br />
+           Escoge el género: {{genero}}
+           <br>
+           <input type="radio" ng-model="genero" value="Hombre">Hombre
+           <input type="radio" ng-model="genero" value="Mujer">Mujer
+         </div>
+<hr>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
